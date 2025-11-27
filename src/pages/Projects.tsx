@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ExternalLink } from 'lucide-react';
 import type { Project } from '@/types/types';
 import { projects } from '@/constants/constants';
+import BackButton from '@/components/BackButton';
 
 const Projects = () => {
     const [activeProject, setActiveProject] = useState<Project | null>(null);
@@ -59,19 +60,19 @@ const Projects = () => {
                 ))}
             </div>
             
-            {/* close button visible on detail view */}
-            <div 
-                className={`absolute top-32 left-8 md:left-12 z-50 transition-all duration-500 ${
-                isDetailView ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-4 pointer-events-none'
-                }`}
-            >
-                <button 
-                onClick={handleClose}
-                className="flex items-center gap-2 text-white/80 hover:text-white group"
-                >
-                <ArrowLeft className="w-5 h-5 transition-transform group-hover:-translate-x-1" />
-                <span className="text-sm font-medium tracking-widest uppercase">(Close)</span>
-                </button>
+            {/* back/close button visible on detail view */}
+            <div className="absolute top-24 md:top-32 left-6 md:left-12 z-50">
+                {!isDetailView ? (
+                    <BackButton />
+                ) : (
+                    <button 
+                        onClick={handleClose}
+                        className="flex items-center gap-2 text-white/80 hover:text-white group"
+                    >
+                        <ArrowLeft className="w-5 h-5 transition-transform group-hover:-translate-x-1" />
+                        <span className="text-sm font-mono tracking-widest uppercase">(CLOSE)</span>
+                    </button>
+                )}
             </div>
 
             {/* main content */}
@@ -115,6 +116,15 @@ const Projects = () => {
                     {activeProject && (
                         <>
                         <div className="mb-6 flex justify-end gap-4 items-center">
+                            <a 
+                                href="#" 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-3 border border-white/30 rounded-full text-white hover:bg-white hover:text-black hover:border-white transition-all duration-300 group"
+                                title="View Project Website"
+                            >
+                                <ExternalLink className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                            </a>
                             <span className="text-xs font-mono border border-white/30 px-2 py-1 rounded text-white/60">
                                 {activeProject.date}
                             </span>

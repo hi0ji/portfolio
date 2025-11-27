@@ -1,4 +1,4 @@
-import type { ExperienceItem, Project } from "@/types/types";
+import type { ExperienceItem, Project, TerminalLine } from "@/types/types";
 
 export const projects: Project[] = [
   {
@@ -76,4 +76,38 @@ export const experiences: ExperienceItem[] = [
     description: "Worked with early-stage startups to define their visual language. Delivered logos, marketing websites, and pitch decks that helped clients secure seed funding.",
     tags: ["BRANDING", "WEB DESIGN", "GRAPHIC DESIGN"]
   }
+];
+
+export const terminalScript: TerminalLine[] = [
+  { text: 'user@portfolio:~$ run skills_manifest.exe --verbose', type: 'command' },
+  { text: 'System check initiated...', type: 'system' },
+  { text: 'Loading core modules...', type: 'system' },
+  { text: ' ', type: 'output' },
+  { text: '====================================', type: 'output', color: 'text-gray-500' },
+  { text: '       SOFTWARE DEVELOPER v2.2      ', type: 'output', color: 'text-white font-bold' },
+  { text: '====================================', type: 'output', color: 'text-gray-500' },
+  { text: ' ', type: 'output' },
+  { text: '>> MODULE: FRONTEND DEVELOPMENT', type: 'output', color: 'text-pink-500 font-bold' },
+  { text: '   [+] React / Next.js', type: 'output' },
+  { text: '   [+] TypeScript / JavaScript', type: 'output' },
+  { text: '   [+] Tailwind CSS', type: 'output' },
+  { text: '   [+] Figma', type: 'output' },
+  { text: ' ', type: 'output' },
+  { text: '>> MODULE: BACKEND DEVELOPMENT', type: 'output', color: 'text-blue-500 font-bold' },
+  { text: '   [+] Node.js / Express', type: 'output' },
+  { text: '   [+] Python / Django', type: 'output' },
+  { text: '   [+] PostgreSQL / Neon', type: 'output' },
+  { text: '   [+] Supabase', type: 'output' },
+  { text: '   [+] REST APIs', type: 'output' },
+  { text: ' ', type: 'output' },
+  { text: '>> MODULE: DATA SCIENCE', type: 'output', color: 'text-yellow-500 font-bold' },
+  { text: '   [+] Machine Learning / Artifical Intelligence', type: 'output' },
+  { text: '   [+] Data Visualization', type: 'output' },
+  { text: '   [+] Data Analysis', type: 'output' },
+  { text: '   [+] Power BI', type: 'output' },
+  { text: '   [+] Python', type: 'output' },
+  { text: '   [+] R', type: 'output' },
+  { text: ' ', type: 'output' },
+  { text: 'Process completed successfully.', type: 'system' },
+  { text: 'Ready for next command.', type: 'system' },
 ];

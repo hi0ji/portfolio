@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Footer from '@/components/contacts/ContactsFooter';
 import Links from '@/components/contacts/ContactsLinks';
+import BackButton from '@/components/BackButton';
 
 const Contacts = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -11,6 +12,9 @@ const Contacts = () => {
 
     return (
         <section className="w-full min-h-screen bg-[#050505] flex flex-col items-center justify-center relative overflow-hidden py-24 px-4">
+            {/* back button */}
+            <BackButton />
+            
             <div className="absolute top-[20%] right-[20%] w-[500px] h-[500px] bg-pink-600/20 rounded-full blur-[120px] pointer-events-none"></div>
             <div className="absolute bottom-[10%] left-[20%] w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none"></div>
             

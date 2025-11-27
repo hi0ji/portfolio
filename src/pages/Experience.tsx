@@ -1,3 +1,4 @@
+import BackButton from '@/components/BackButton';
 import { experiences } from '@/constants/constants';
 import { useState, useEffect } from 'react';
 
@@ -12,6 +13,9 @@ const Experience = () => {
 
     return (
         <section className='w-full min-h-screen pt-32 pb-20 px-6 lg:px-12 flex flex-col relative overflow-hidden bg-[#050505]'>
+            
+            {/* back button */}
+            <BackButton />
             
             {/* bg ambience */}
             <div className="absolute top-[10%] right-[10%] w-[500px] h-[500px] bg-pink-900/10 rounded-full blur-[120px] pointer-events-none"></div>

@@ -26,3 +26,9 @@ export interface ExperienceItem {
   description: string;
   tags: string[];
 }
+
+export interface TerminalLine {
+  text: string;
+  type: 'command' | 'output' | 'system';
+  color?: string;
+}

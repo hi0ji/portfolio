@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import TextInfo from '@/components/education/TextInfo';
 import ThesisPaper from '@/components/education/ThesisPaper';
+import BackButton from '@/components/BackButton';
 
 const Education = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -11,6 +12,9 @@ const Education = () => {
     
     return (
         <section className='w-full min-h-screen pt-32 pb-20 px-6 lg:px-12 flex flex-col justify-center relative overflow-hidden bg-[#050505]'>
+            {/* back button */}
+            <BackButton />
+            
             <div className={`max-w-7xl mx-auto w-full flex flex-col gap-1 md:gap-4 select-none transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
 
                 <div>

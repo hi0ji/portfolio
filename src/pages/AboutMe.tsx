@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
 import TextType from '../components/TextType';
 import { Separator } from '../components/ui/separator';
+import BackButton from '@/components/BackButton';
 
 const AboutMe = () => {
   
@@ -13,6 +14,9 @@ const AboutMe = () => {
 
   return (
     <section className='relative w-full min-h-screen lg:h-screen flex items-center justify-center px-6 lg:px-12 py-12 lg:py-0 overflow-hidden bg-[#050505]'>
+        {/* back button */}
+        <BackButton />
+        
         <div className='max-w-7xl w-full mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 items-center justify-between'>
           
           {/* image */}
