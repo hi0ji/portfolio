@@ -994,6 +994,7 @@
     grid-template-columns: 1fr;
     align-items: start;
     gap: 1rem;
+    position: relative;
   }
 
   .portfolio-stack-card-main {
@@ -1021,13 +1022,17 @@
   }
 
   .portfolio-stack-icon {
-    width: 4.75rem;
-    justify-self: end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3.25rem;
+    opacity: 0.62;
+    pointer-events: none;
   }
 
   .portfolio-stack-icon svg {
-    width: 3rem;
-    height: 3rem;
+    width: 2.35rem;
+    height: 2.35rem;
   }
 
   .portfolio-projects-section {
